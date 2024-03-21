@@ -2,13 +2,15 @@ function setup()
 {
     createCanvas(800,600);
 }
-<<<<<<< HEAD
+
 function draw(){
     background ("green");
     
    smileyFaceBeta()
 
+   smileyFaceTimmy();
 
+   smileyFaceDenis();
 }
 
 function smileyFaceBeta()
@@ -37,13 +39,6 @@ arc(400, 310, 20, 10, 0, Math.PI);
 
 
 }
-=======
-function draw()
-{
-    background("green");
-
-    smileyFaceTimmy();
-}
 
 function smileyFaceTimmy() {
 //BODY
@@ -67,8 +62,10 @@ ellipse(410, 290, 2);
 stroke("red");
 fill("gray");
 arc(400, 310, 20, 10, 0, PI);
-smileyFaceDenis();
+
 }
+
+
 function smileyFaceDenis()
 {
 
@@ -104,4 +101,3 @@ function smileyFaceDenis()
     circle(420,290,2);
  
 }
->>>>>>> 8112a27a67ead64e9e5f4e5e0856870f167d2772

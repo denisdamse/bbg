@@ -10,7 +10,8 @@ function draw(){
 
    smileyFaceTimmy(500, 100);
 
-   smileyFaceDenis(230, 310);
+   checkLimitsSMRadu();
+   smileyFaceDenis(smDenisx+=1, smDenisy++);
 }
 
 function smileyFaceBeta()
@@ -64,8 +65,15 @@ fill("gray");
 arc(x, y + 10, 20, 10, 0, PI);
 
 }
-
-
+function checkLimitsSMRadu()
+{
+    if(smDenisx>=800)
+    {
+        smDenisx*=-1;
+    }
+}
+let smDenisx = 400;
+let smDenisy = 300;
 function smileyFaceDenis(x,y)
 {
 

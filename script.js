@@ -8,7 +8,7 @@ function draw(){
     
    smileyFaceBeta()
 
-   smileyFaceTimmy();
+   smileyFaceTimmy(500, 100);
 
    smileyFaceDenis();
 }
@@ -40,28 +40,28 @@ arc(400, 310, 20, 10, 0, Math.PI);
 
 }
 
-function smileyFaceTimmy() {
+function smileyFaceTimmy(x, y) {
 //BODY
 fill("yellow");
 stroke("black");
-circle(400, 300, 50);
+circle(x, y, 50);
 
 //EYES
 fill("white");
 stroke("brown");
-ellipse(390, 290, 10, 5);
-ellipse(410, 290, 10, 5);
+ellipse(x + 10, y - 10, 10, 5);
+ellipse(x - 10, y - 10, 10, 5);
 
 //EYES PUPILS
 stroke("black");
 fill("black");
-ellipse(390, 290, 2);
-ellipse(410, 290, 2);
+ellipse(x - 10, y - 10, 2);
+ellipse(x + 10, y - 10, 2);
 
 //MOUTH
 stroke("red");
 fill("gray");
-arc(400, 310, 20, 10, 0, PI);
+arc(x, y + 10, 20, 10, 0, PI);
 
 }
 

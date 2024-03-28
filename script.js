@@ -5,6 +5,7 @@ let smTimmyX = 500;
 let smTimmyY = 100;
 
 let directionX = 1;
+let directionY = 1;
 
 function setup()
 {
@@ -51,10 +52,12 @@ arc(400, 310, 20, 10, 0, Math.PI);
 }
 
 function checkLimitsSMTimmy() {
-    if(smTimmyX >= tableWidth) 
+    if(smTimmyX >= tableWidth || smTimmyX <= 0) 
         directionX *= -1;
-
+    if(smTimmyY >= tableHeigh || smTimmyY <= 0)
+        directionY *= -1;
     smTimmyX += directionX;
+    smTimmyY += directionY;
 }
 
 function smileyFaceTimmy(x, y) {

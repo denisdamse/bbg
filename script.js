@@ -10,7 +10,7 @@ function draw(){
 
    smileyFaceTimmy(500, 100);
 
-   checkLimitsSMRadu();
+   checkLimitsSMDenis();
    smileyFaceDenis(smDenisx+=1, smDenisy++);
 }
 

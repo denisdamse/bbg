@@ -1,25 +1,19 @@
-let tableWidth = 800;
-let tableHeigh = 600;
-
-let smTimmyX = 500;
-let smTimmyY = 100;
-
-let directionX = 1;
-let directionY = 1;
+let tablewidth = 800;
+let tableheight = 600;
 
 function setup()
 {
-    createCanvas(tableWidth, tableHeigh);
+    createCanvas(tablewidth, tableheight);
 }
 
 function draw(){
     background ("green");
 
+    smileyFaceTimmy(smTimmy.x, smTimmy.y);
+
     checkLimitsSMTimmy();
     
    smileyFaceBeta()
-
-   smileyFaceTimmy(smTimmyX, smTimmyY);
 
    smileyFaceDenis(230, 310);
 }
@@ -50,41 +44,6 @@ arc(400, 310, 20, 10, 0, Math.PI);
 
 
 }
-
-function checkLimitsSMTimmy() {
-    if(smTimmyX >= tableWidth || smTimmyX <= 0) 
-        directionX *= -1;
-    if(smTimmyY >= tableHeigh || smTimmyY <= 0)
-        directionY *= -1;
-    smTimmyX += directionX;
-    smTimmyY += directionY;
-}
-
-function smileyFaceTimmy(x, y) {
-//BODY
-fill("yellow");
-stroke("black");
-circle(x, y, 50);
-
-//EYES
-fill("white");
-stroke("brown");
-ellipse(x + 10, y - 10, 10, 5);
-ellipse(x - 10, y - 10, 10, 5);
-
-//EYES PUPILS
-stroke("black");
-fill("black");
-ellipse(x - 10, y - 10, 2);
-ellipse(x + 10, y - 10, 2);
-
-//MOUTH
-stroke("red");
-fill("gray");
-arc(x, y + 10, 20, 10, 0, PI);
-
-}
-
 
 function smileyFaceDenis(x,y)
 {

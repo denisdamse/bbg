@@ -17,6 +17,8 @@ function draw() {
     smileyFaceDenis(smDenis.x, smDenis.y);
 
     checkLimitsSMDenis();
+    
+    createPaddleDenis();
 }
 
 function smileyFaceBeta() {

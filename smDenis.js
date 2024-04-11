@@ -1,22 +1,29 @@
 function checkLimitsSMDenis() {
-    if (smDenis.x >= tablewidth - smDenis.ray || smDenis.x <= smDenis.ray)
-
-        smDenis.directionDenisX *= -1;
+    if (smDenis.x >= tablewidth - smDenis.ray || smDenis.x <= smDenis.ray) { smDenis.directionDenisX *= -1; }
     smDenis.x += smDenis.directionDenisX * smDenis.speedX;
 
-    if (smDenis.y >= tableheight - smDenis.ray || smDenis.y <= smDenis.ray)
-
+    if(smDenis.y <= 0 + smDenis.ray)
+    {
+        smDenis.directionDenisY*=-1
+    }
+    if (
+        smDenis.y >= paddleDenis.y - smDenis.ray &&
+        smDenis.y <=paddleDenis.y+paddleDenis.height &&
+        smDenis.x >= paddleDenis.x + smDenis.ray &&
+        smDenis.x <= paddleDenis.x + paddleDenis.width - smDenis.ray
+    ) {
         smDenis.directionDenisY *= -1;
+    }
     smDenis.y += smDenis.directionDenisY * smDenis.speedY;
 }
 let smDenis = {
     x: 400,
     y: 300,
-    ray: 50,
-    directionDenisX: 7,
-    directionDenisY: 6,
-    speedX:2,
-    speedY:2,
+    ray: 30,
+    directionDenisX: 1,
+    directionDenisY: 1,
+    speedX: 2,
+    speedY: 2,
 };
 
 function smileyFaceDenis(x, y) {

@@ -1,23 +1,32 @@
 let smTimmy = {
     x: 400,
     y: 300,
-    ray: 35,
-    directionTimmyX: 7,
-    directionTimmyY: 6,
+    ray: 30,
+    directionTimmyX: 4,
+    directionTimmyY: 4,
     speedX: 1,
     speedY: 1,
 
 };
 
 function checkLimitsSMTimmy() {
-    if (smTimmy.x >= tablewidth - smTimmy.ray || smTimmy.x <= smTimmy.ray)
-
+    if (smTimmy.x >= tablewidth - smTimmy.ray || smTimmy.x <= 0 + smTimmy.ray) {
         smTimmy.directionTimmyX *= -1;
+    }
     smTimmy.x += smTimmy.directionTimmyX * smTimmy.speedX;
 
-    if (smTimmy.y >= tableheight - smTimmy.ray || smTimmy.y <= smTimmy.ray)
-
+    if (smTimmy.y <= 0 + smTimmy.ray) {
         smTimmy.directionTimmyY *= -1;
+    }
+    
+    if (
+        smTimmy.y >= pdTimmy.y - smTimmy.ray &&
+        smTimmy.y <= pdTimmy.y + pdTimmy.height &&
+        smTimmy.x >= pdTimmy.x - smTimmy.ray &&
+        smTimmy.x <= pdTimmy.x + pdTimmy.width + smTimmy.ray
+    ) {
+        smTimmy.directionTimmyY *= -1;
+    }
     smTimmy.y += smTimmy.directionTimmyY * smTimmy.speedY;
 }
 

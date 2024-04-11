@@ -1,9 +1,9 @@
 let smTimmy = {
     x: 400,
-    y: 300,
+    y: 350,
     ray: 30,
-    directionTimmyX: 4,
-    directionTimmyY: 4,
+    directionTimmyX: 2,
+    directionTimmyY: 2,
     speedX: 1,
     speedY: 1,
 

@@ -1,9 +1,9 @@
 let pdTimmy={
     x: tablewidth/2,
-    y:500,
+    y:550,
     color:"black",
-    width: 80,
-    height: 10
+    width: 120,
+    height: 15
 }
 
 function createPaddleTimmy() {

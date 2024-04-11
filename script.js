@@ -3,6 +3,7 @@ let tableheight = 600;
 
 function setup() {
     createCanvas(tablewidth, tableheight);
+    initBriksTimmy()
 }
 
 function draw() {
@@ -13,6 +14,8 @@ function draw() {
     checkLimitsSMTimmy();
 
     createPaddleTimmy();
+
+    createBicksTimmy();
 
     smileyFaceBeta();
 

@@ -11,10 +11,11 @@ function draw(){
    smileyFaceTimmy(500, 100);
 
    
-   smileyFaceDenis(smDenisx+=directionDenisX, smDenisy+=directionDenisY);
+   smileyFaceDenis(smDenis.x,smDenis.y);
    checkLimitsSMDenis();
 }
-
+let tablewidth=800;
+let tableheight=600;
 function smileyFaceBeta()
 {
  //BODY

@@ -1,14 +1,25 @@
+let tableWidth = 800;
+let tableHeigh = 600;
+
+let smTimmyX = 500;
+let smTimmyY = 100;
+
+let directionX = 1;
+let directionY = 1;
+
 function setup()
 {
-    createCanvas(800,600);
+    createCanvas(tableWidth, tableHeigh);
 }
 
 function draw(){
     background ("green");
+
+    checkLimitsSMTimmy();
     
    smileyFaceBeta()
 
-   smileyFaceTimmy(500, 100);
+   smileyFaceTimmy(smTimmyX, smTimmyY);
 
    
    smileyFaceDenis(smDenis.x,smDenis.y);
@@ -41,6 +52,15 @@ circle(410,290,2);
 arc(400, 310, 20, 10, 0, Math.PI);
 
 
+}
+
+function checkLimitsSMTimmy() {
+    if(smTimmyX >= tableWidth || smTimmyX <= 0) 
+        directionX *= -1;
+    if(smTimmyY >= tableHeigh || smTimmyY <= 0)
+        directionY *= -1;
+    smTimmyX += directionX;
+    smTimmyY += directionY;
 }
 
 function smileyFaceTimmy(x, y) {

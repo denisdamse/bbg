@@ -12,6 +12,8 @@ function draw() {
 
     checkLimitsSMTimmy();
 
+    createPaddleTimmy();
+
     smileyFaceBeta();
 
     smileyFaceDenis(smDenis.x, smDenis.y);

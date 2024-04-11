@@ -18,7 +18,6 @@ let smDenis = {
     directionDenisY: 6,
     speedX:2,
     speedY:2,
-    
 };
 
 function smileyFaceDenis(x,y)

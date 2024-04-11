@@ -1,15 +1,6 @@
-let tableWidth = 800;
-let tableHeigh = 600;
-
-let smTimmyX = 500;
-let smTimmyY = 100;
-
-let directionX = 1;
-let directionY = 1;
-
 function setup()
 {
-    createCanvas(tableWidth, tableHeigh);
+    createCanvas(tablewidth, tableheight);
 }
 
 function draw(){
